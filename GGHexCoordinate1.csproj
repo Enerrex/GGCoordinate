@@ -6,6 +6,7 @@
         <Nullable>enable</Nullable>
         <Authors>Package Deal</Authors>
         <PackageTags>Hex, Coordinate, Hexagon, Coord</PackageTags>
+        <RootNamespace>GGHexCoordinate</RootNamespace>
     </PropertyGroup>
 
 </Project>

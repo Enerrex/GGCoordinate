@@ -1,4 +1,4 @@
-﻿namespace GGHexCoordinate
+﻿namespace GGHexCoordinate.FlatTop
 {
     public struct HexWithNeighborsIterator<T> where T : unmanaged, IHexCoordinate<T>
     {

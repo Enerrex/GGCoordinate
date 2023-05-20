@@ -1,4 +1,4 @@
-﻿namespace GGHexCoordinate
+﻿namespace GGHexCoordinate.FlatTop
 {
     public static class HashCode
     {

@@ -1,8 +1,9 @@
-﻿using static GGHexCoordinate.HashCode;
-using static GGHexCoordinate.Neighbors;
-using static GGHexCoordinate.Neighbors.HexagonalAxis;
+﻿using System;
+using static GGHexCoordinate.FlatTop.HashCode;
+using static GGHexCoordinate.FlatTop.Neighbors;
+using static GGHexCoordinate.FlatTop.Neighbors.HexagonalAxis;
 
-namespace GGHexCoordinate
+namespace GGHexCoordinate.FlatTop
 {
     public readonly struct AxialHexCoordinate :
         IEquatable<AxialHexCoordinate>,

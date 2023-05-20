@@ -1,4 +1,6 @@
-﻿namespace GGHexCoordinate
+﻿using System;
+
+namespace GGHexCoordinate.FlatTop
 {
     /// <summary>
     ///     We use "Flat top" style hexagon grids, relative to (0, 0, 0) World Space
@@ -26,6 +28,8 @@
             South = 1 << 3,
             SouthWest = 1 << 4,
             NorthWest = 1 << 5,
+            West = 1 << 6,
+            East = 1 << 7,
             All = 63
         }
 

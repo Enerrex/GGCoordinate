@@ -1,6 +1,6 @@
-﻿using static GGHexCoordinate.Neighbors;
+﻿using static GGHexCoordinate.FlatTop.Neighbors;
 
-namespace GGHexCoordinate
+namespace GGHexCoordinate.FlatTop
 {
 
     public interface IHexCoordinate<T> : IConvertsToCube, IConvertsToAxial, IConvertsToOffset, INeighbors<T>

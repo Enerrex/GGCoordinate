@@ -1,6 +1,7 @@
-﻿using static GGHexCoordinate.Neighbors;
+﻿using System;
+using static GGHexCoordinate.FlatTop.Neighbors;
 
-namespace GGHexCoordinate
+namespace GGHexCoordinate.FlatTop
 {
     public struct HexWithNeighbors<T> where T : unmanaged, INeighbors<T>, IHexCoordinate<T>
     {
