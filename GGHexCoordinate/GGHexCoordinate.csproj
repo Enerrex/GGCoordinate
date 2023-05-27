@@ -6,7 +6,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Common\" />
+      <PackageReference Include="GGUnmanagedAPI" Version="2.0.0" />
     </ItemGroup>
-
 </Project>

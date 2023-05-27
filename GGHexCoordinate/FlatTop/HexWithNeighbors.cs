@@ -3,14 +3,14 @@ using static GGHexCoordinate.FlatTop.Neighbors;
 
 namespace GGHexCoordinate.FlatTop
 {
-    public struct HexWithNeighbors<T> where T : unmanaged, INeighbors<T>, IHexCoordinate<T>
+    public struct HexWithNeighbors<THex> where THex : unmanaged, INeighbors<THex>, IHexCoordinate<THex>
     {
         public HexagonalAxis Neighbors;
-        public T Coordinate;
+        public THex Coordinate;
 
         public HexWithNeighbors
         (
-            T coordinate,
+            THex coordinate,
             HexagonalAxis neighbors = HexagonalAxis.All
         )
         {
@@ -18,7 +18,7 @@ namespace GGHexCoordinate.FlatTop
             Coordinate = coordinate;
         }
 
-        public T this
+        public THex this
         [
             HexagonalAxis index
         ]
@@ -38,16 +38,16 @@ namespace GGHexCoordinate.FlatTop
             }
         }
 
-        public readonly HexWithNeighborsIterator<T> GetIterator()
+        public readonly HexWithNeighborsIterator<THex> GetIterator()
         {
-            return new HexWithNeighborsIterator<T>(this);
+            return new HexWithNeighborsIterator<THex>(this);
         }
 
-        public T North => Coordinate.GetNeighbor(HexagonalAxis.North);
-        public T NorthEast => Coordinate.GetNeighbor(HexagonalAxis.NorthEast);
-        public T SouthEast => Coordinate.GetNeighbor(HexagonalAxis.SouthEast);
-        public T South => Coordinate.GetNeighbor(HexagonalAxis.South);
-        public T SouthWest => Coordinate.GetNeighbor(HexagonalAxis.SouthWest);
-        public T NorthWest => Coordinate.GetNeighbor(HexagonalAxis.NorthWest);
+        public THex North => Coordinate.GetNeighbor(HexagonalAxis.North);
+        public THex NorthEast => Coordinate.GetNeighbor(HexagonalAxis.NorthEast);
+        public THex SouthEast => Coordinate.GetNeighbor(HexagonalAxis.SouthEast);
+        public THex South => Coordinate.GetNeighbor(HexagonalAxis.South);
+        public THex SouthWest => Coordinate.GetNeighbor(HexagonalAxis.SouthWest);
+        public THex NorthWest => Coordinate.GetNeighbor(HexagonalAxis.NorthWest);
     }
 }

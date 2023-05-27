@@ -3,8 +3,8 @@
 namespace GGHexCoordinate.FlatTop
 {
 
-    public interface IHexCoordinate<T> : IConvertsToCube, IConvertsToAxial, IConvertsToOffset, INeighbors<T>
-        where T : unmanaged, IHexCoordinate<T>
+    public interface IHexCoordinate<THex> : IConvertsToCube, IConvertsToAxial, IConvertsToOffset, INeighbors<THex>
+        where THex : unmanaged, IHexCoordinate<THex>
     {
 
     }

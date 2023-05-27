@@ -1,11 +1,13 @@
-﻿namespace GGHexCoordinate.FlatTop
+﻿using UnmanagedAPI.Iterator;
+
+namespace GGHexCoordinate.FlatTop
 {
-    public struct HexWithNeighborsIterator<T> where T : unmanaged, IHexCoordinate<T>
+    public struct HexWithNeighborsIterator<THex> : IUnmanagedIterator<THex> where THex : unmanaged, IHexCoordinate<THex>
     {
         private Neighbors.HexagonalAxisIterator _axisIterator;
-        private HexWithNeighbors<T> _target;
+        private HexWithNeighbors<THex> _target;
 
-        public T Current { get; private set; }
+        public THex Current { get; private set; }
 
         public Neighbors.HexagonalAxis CurrentAxis => _axisIterator.Current;
 
@@ -15,7 +17,7 @@
         /// <param name="target"></param>
         public HexWithNeighborsIterator
         (
-            HexWithNeighbors<T> target
+            HexWithNeighbors<THex> target
         )
         {
             _axisIterator = new Neighbors.HexagonalAxisIterator();
