@@ -36,9 +36,9 @@ namespace GGHexCoordinate.FlatTop
         {
             while (true)
             {
+                if (!_axisIterator.MoveNext()) return false;
                 // Get the neighbor flag that corresponds to the current neighbor index
                 var neighbor_flag = _axisIterator.Current;
-                if (!_axisIterator.MoveNext()) return false;
                 // Check to see if the current bit is a valid neighbor
                 if ((_target.Neighbors & neighbor_flag) == 0) continue;
                 Current = _target[neighbor_flag];
